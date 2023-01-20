@@ -1,0 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat, Arial, sans-serif;
+  background: #231B1A;
+  color: white;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  border: 3px solid #231B1A;
+}
