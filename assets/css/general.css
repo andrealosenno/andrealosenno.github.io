@@ -6,8 +6,18 @@ body {
 }
 
 a {
+  font-size: 20px;
+  font-weight: 700;
   color: white;
   text-decoration: none;
+}
+
+form {
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+textarea {
+  font-family: Montserrat, Arial, sans-serif;
 }
 
 ::-webkit-scrollbar {

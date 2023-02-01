@@ -51,7 +51,6 @@
 }
 
 .container {
-  border: 1px solid red;
   width: 100%;
   padding: 10% 5% 5% 5%;
 }
@@ -99,32 +98,16 @@
 
 .contatti {
   font-size: 50px;
-  padding-top: 15%;
+  padding-top: 7%;
+  padding-bottom: 3%;
   position: relative;
   text-align: center;
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  background-color: #231B1A;
-  opacity: 0.75;
-}
-
-.contact-icon {
-  width: 3vW;
-  padding-left: 20px;
-  padding-right: 5px;
 }
 
 .list {
   font-size: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
-  justify-content: left;
+  grid-template-columns: 400px 400px;
 }
 
 @media screen and (max-width: 400px) {

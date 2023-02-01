@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="/assets/css/general.css">
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/contact-form.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap"
@@ -22,38 +23,29 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
     integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("nKhkO5lU3e_coKrjm");
+    })();
+  </script>
 </head>
 <body>
 
 <img class="img-bg" src="/assets/img/bg.png">
 
-<div class="section watch">
+<section class="section watch" data-section-name="welcome">
   <p class="title welcome" id="carousel-words"></p>
-</div>
+</section>
 
-<div class="section watch">
-  <h2 class="title">Mi presento, sono Andrea Losenno,
+<section class="section watch" data-section-name="chi-sono">
+  <h1 class="title">Andrea Losenno
     <br>
-    <br>
-    studente di Full Stack Developement
-    <br>
-    <br>
-    presso la start2impact University!
-  </h2>
-</div>
+    Full Stack Developement Student</h1>
+</section>
 
-<div class="section watch">
-  <h2 class="title">In questa pagina troverai tutte
-    <br>
-    <br>
-    le informazioni sulle mie esperienze
-    <br>
-    <br>
-    formative, lavorative e di self-developement!
-  </h2>
-</div>
-
-<div class="panel">
+<section class="panel" data-section-name="esperienze">
 
   <div class="container">
     <h2 class="watch fade-in title-big">Le mie <br> esperienze</h2>
@@ -86,9 +78,9 @@
     <img class="img-right" src="/assets/img/esperienze.png" alt="esperienze lavorative">
   </div>
   
-</div>
+</section>
 
-<div class="panel">
+<section class="panel" data-section-name="istruzione">
 
   <div class="container">
     <h2 class="watch fade-in title-big">La mia <br> istruzione</h2>
@@ -106,9 +98,9 @@
     <img class="img-right" src="/assets/img/istruzione.png" alt="istruzione">
   </div>
 
-</div>
+</section>
 
-<div class="panel">
+<section class="panel" data-section-name="certificazioni">
 
   <div class="container">
     <h2 class="watch fade-in title-big">Le mie <br> certificazioni</h2>
@@ -129,27 +121,16 @@
         <br>
         UNIDA - Associazione Mnemosine
       </p>
-      
-      <p class="watch fade-in intro">
-        Fondamenti di informatica
-        <br>
-        Associazione Mnemosine
-      </p>
 
-     <p class="watch fade-in intro">
-        Coding: pensiero computazionale e informatica
-        <br>
-        Associazione Mnemosine
-     </p>
   </div>
 
   <div class="img">
     <img class="img-right" src="/assets/img/certificazioni.png" alt="certificazioni">
   </div>
 
-</div>
+</section>
 
-<div class="panel">
+<section class="panel" data-section-name="competenze">
 
   <div class="container">
     <h2 class="watch fade-in title-big">Le mie <br> competenze</h2>
@@ -176,23 +157,33 @@
     <img class="img-right" src="/assets/img/competenze.png" alt="competenze">
   </div>
 
-</div>
+</section>
 
-  <div class="section watch">
-    <h2 class="watch fade-in contatti">Contatti</h2>
+  <section class="section watch" data-section-name="contattami">
+    <div class="contact-form">
+      <h2 class="watch fade-in contatti">Contattami</h2>
+      <form id="contact-form" method="post">
+        <input id="name" type="text" class="form-control watch fade-in" placeholder="Nome" required>
+      </form>
+      <br>
+      <form id="contact-form" method="post">
+        <input id="email" type="email" class="form-control watch fade-in" placeholder="Email" required>
+      </form>
+      <br>
+      <textarea id="message" class="form-control watch fade-in" placeholder="Messaggio" rows="4" required></textarea>
+      <br>
+      <button class="form-control submit watch fade-in" onclick="sendMail()">Invia</button>
+    </div>
     <div class="contact-info">
-      <img class="contact-icon" src="/assets/img/phone.png">
-      <p>+39 388 871 7743</p>
-      <img class="contact-icon" src="/assets/img/email.png">
-      <p>andrealosenno@gmail.com</p>
-      <img class="contact-icon" src="/assets/img/linkedin.png">
+      <img class="contact-icon" src="/assets/img/linkedin.png" alt="linkedin">
       <a href="https://www.linkedin.com/in/andrealosenno/" target="_blank">Andrea Losenno</a>
     </div>
-  </div>
+  </section>
 
 <script src="/assets/js/observer.js"></script>
 <script src="/assets/js/carousel.js"></script>
 <script src="/assets/js/scrollify.js"></script>
+<script src="/assets/js/emailjs.js"></script>
 
 </body>
 </html>
